@@ -1,103 +1,218 @@
 # MerchantGPT 🚀
 
-> Autonomous AI Growth Manager for E-commerce Merchants
+> **Autonomous AI Growth Manager for E-commerce Merchants**
 
-MerchantGPT is a production-grade AI SaaS platform that analyzes merchant sales, refunds, abandoned carts, customer behavior, and revenue trends, then generates actionable growth recommendations using Gemini AI, PostgreSQL analytics, and FastAPI.
+MerchantGPT is a production-grade AI SaaS platform that analyzes merchant sales, refunds, abandoned carts, customer behavior, and revenue trends, then generates actionable growth recommendations using **Gemini 3.6 Flash**, **FastAPI**, **PostgreSQL**, and **Next.js**.
+
+![Python](https://img.shields.io/badge/Python-3.13-blue)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.115-green)
+![Next.js](https://img.shields.io/badge/Next.js-15-black)
+![Postgres](https://img.shields.io/badge/PostgreSQL-18-blue)
+![Gemini](https://img.shields.io/badge/AI-Gemini%203.6%20Flash-orange)
+![Tests](https://img.shields.io/badge/Tests-37%2F37-success)
 
 ---
 
-## ✨ Features
+# 📸 Screenshots
 
-- 🤖 AI Chat with SQL Tool Calling
-- 📊 Merchant Analytics Dashboard
+## Dashboard
+
+![Dashboard](docs/dashboard.png)
+
+## AI Chat
+
+![AI Chat](docs/chat.png)
+
+## Revenue Leak Detection
+
+![Revenue Leaks](docs/leaks.png)
+
+## Customer Segmentation
+
+![Customer Segments](docs/segments.png)
+
+---
+
+# ✨ Features
+
+- 🤖 AI Chat powered by Gemini 3.6 Flash
+- 🧠 SQL Tool Calling for live business analytics
+- 📊 Executive Merchant Dashboard
 - 💸 Revenue Leak Detection
 - 🛒 Abandoned Cart Recovery
-- 👥 Customer Segmentation (RFM)
-- ⚠️ Churn Prediction
-- 📣 AI Marketing Campaign Generator
-- 📈 Weekly Executive AI Report
+- 👥 RFM Customer Segmentation
+- ⚠️ AI Churn Prediction
+- 📣 Marketing Campaign Generator
+- 📈 Weekly Executive Report
 - 🔐 JWT Authentication
-- 🧠 Chat Memory with pgvector
+- 🧠 pgvector Chat Memory
 
 ---
 
-## Tech Stack
+# 🏗 Architecture
 
-### Frontend
+```text
+          Next.js 15 Frontend
+                  │
+          REST API (JWT Auth)
+                  │
+             FastAPI Backend
+                  │
+     ┌────────────┼────────────┐
+     │            │            │
+PostgreSQL    pgvector     Gemini 3.6
+ Analytics   Chat Memory   Tool Calling
+```
+
+---
+
+# 🛠 Tech Stack
+
+## Frontend
+
 - Next.js 15
 - TypeScript
 - Tailwind CSS
 - Recharts
+- Lucide Icons
 
-### Backend
+## Backend
+
 - FastAPI
-- PostgreSQL
 - SQLAlchemy
+- PostgreSQL 18
 - pgvector
+- JWT Authentication
 
-### AI
+## AI
+
 - Gemini 3.6 Flash
-- Tool Calling
-- Vector Memory
+- Function / Tool Calling
+- Context Memory
+- Business Analytics
 
 ---
 
-## Demo Credentials
+# 📊 AI Capabilities
 
-**Email**
+MerchantGPT can answer questions like:
 
-demo@aurorahome.example
+- Why did revenue drop this week?
+- Which customers are most likely to churn?
+- What products have the highest refund rates?
+- Generate an abandoned cart recovery email.
+- Create a campaign for loyal customers.
+- Produce a CEO weekly executive report.
 
-**Password**
-
-Demo@12345
+The AI retrieves real merchant data using SQL tools before generating responses.
 
 ---
 
-## Local Setup
+# 🔑 Demo Credentials
 
-### Backend
+| Field | Value |
+|------|------|
+| Email | `demo@aurorahome.example` |
+| Password | `Demo@12345` |
+
+---
+
+# ⚙️ Local Setup
+
+## Backend
 
 ```bash
 cd backend
+
 python -m venv .venv
 source .venv/bin/activate
+
 pip install -r requirements.txt
+
 uvicorn app.main:app --reload
 ```
 
-### Frontend
+Backend runs at:
+
+```text
+http://localhost:8000
+```
+
+## Frontend
 
 ```bash
 cd frontend
+
 npm install
+
 npm run dev
 ```
 
+Frontend runs at:
+
+```text
+http://localhost:3000
+```
+
 ---
 
-## AI Workflow
+# 🧠 AI Workflow
 
 1. User asks a business question.
-2. Gemini decides which SQL tool to call.
-3. FastAPI executes analytical queries.
-4. PostgreSQL returns merchant data.
-5. Gemini generates an executive-quality answer.
+2. Gemini decides which analytical tool to invoke.
+3. FastAPI executes SQL queries.
+4. PostgreSQL returns structured merchant data.
+5. Gemini generates an executive-quality business insight.
+6. Conversation is stored using pgvector memory.
 
 ---
 
-## Testing
+# 🧪 Testing
+
+Run backend tests:
 
 ```bash
+cd backend
 pytest
 ```
 
-**37/37 tests passing ✅**
+**Result**
+
+```text
+37 passed in 0.12s
+```
 
 ---
 
-## Author
+# 📁 Project Structure
+
+```text
+MerchantGPT
+│
+├── frontend/
+│   ├── src/
+│   └── components/
+│
+├── backend/
+│   ├── app/
+│   ├── scripts/
+│   └── tests/
+│
+├── docs/
+│   ├── dashboard.png
+│   ├── chat.png
+│   ├── leaks.png
+│   └── segments.png
+│
+└── README.md
+```
+
+---
+
+# 👨‍💻 Author
 
 **Manish Kumar Reddy**
 
-Built for the Razorpay AI Builder Internship 2026.
+Built for the **Razorpay AI Builder Internship 2026**.
+
+If you found this project interesting, consider giving it a ⭐.
