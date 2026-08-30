@@ -1,4 +1,4 @@
-# MerchantGPT 🚀
+# MerchantGPT – AI-Powered E-Commerce Growth Manager
 
 > **Autonomous AI Growth Manager for E-commerce Merchants**
 
