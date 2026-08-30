@@ -2,124 +2,153 @@
 
 > **Autonomous AI Growth Manager for E-commerce Merchants**
 
-MerchantGPT is a production-grade AI SaaS platform that analyzes merchant sales, refunds, abandoned carts, customer behavior, and revenue trends, then generates actionable growth recommendations using **Gemini 3.6 Flash**, **FastAPI**, **PostgreSQL**, and **Next.js**.
-
-![Python](https://img.shields.io/badge/Python-3.13-blue)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.115-green)
-![Next.js](https://img.shields.io/badge/Next.js-15-black)
-![Postgres](https://img.shields.io/badge/PostgreSQL-18-blue)
-![Gemini](https://img.shields.io/badge/AI-Gemini%203.6%20Flash-orange)
-![Tests](https://img.shields.io/badge/Tests-37%2F37-success)
+MerchantGPT is a production-grade AI SaaS platform that helps online merchants analyze sales, refunds, abandoned carts, customer behavior, and revenue trends using **Gemini 3.6 Flash**, **FastAPI**, **PostgreSQL**, and **Next.js**.
 
 ---
 
-# 📸 Screenshots
+## 🌐 Live Demo
 
-## Dashboard
+* **Frontend:** https://merchant-gpt.vercel.app
+* **Backend API:** https://merchantgpt-api.onrender.com/docs
+* **GitHub:** https://github.com/Manish-kumar-reddy/MerchantGPT
+
+---
+
+## ✨ Features
+
+* 🤖 AI Business Chat powered by Gemini 3.6 Flash
+* 📊 Executive Analytics Dashboard
+* 💸 Revenue Leak Detection
+* 🛒 Abandoned Cart Recovery Insights
+* 👥 RFM Customer Segmentation
+* ⚠️ Customer Churn Prediction
+* 📣 AI Marketing Campaign Generator
+* 📈 Weekly Executive Reports
+* 🔐 JWT Authentication
+* 🧠 Persistent Chat Memory with pgvector
+
+---
+
+## 📸 Screenshots
+
+### Dashboard
 
 ![Dashboard](docs/dashboard.png)
 
-## AI Chat
+### AI Chat
 
 ![AI Chat](docs/chat.png)
 
-## Revenue Leak Detection
+### Revenue Leak Detection
 
 ![Revenue Leaks](docs/leaks.png)
 
-## Customer Segmentation
+### Customer Segmentation
 
 ![Customer Segments](docs/segments.png)
 
 ---
 
-# ✨ Features
+## 💼 Business Value
 
-- 🤖 AI Chat powered by Gemini 3.6 Flash
-- 🧠 SQL Tool Calling for live business analytics
-- 📊 Executive Merchant Dashboard
-- 💸 Revenue Leak Detection
-- 🛒 Abandoned Cart Recovery
-- 👥 RFM Customer Segmentation
-- ⚠️ AI Churn Prediction
-- 📣 Marketing Campaign Generator
-- 📈 Weekly Executive Report
-- 🔐 JWT Authentication
-- 🧠 pgvector Chat Memory
+MerchantGPT helps e-commerce businesses:
+
+* Identify revenue leaks before they become costly
+* Recover abandoned carts with AI-generated campaigns
+* Segment customers based on purchasing behavior
+* Predict churn risk using merchant analytics
+* Generate executive-ready business reports
+* Ask natural-language questions about business performance
 
 ---
 
-# 🏗 Architecture
+## 🏗 Cloud Architecture
 
 ```text
-          Next.js 15 Frontend
-                  │
-          REST API (JWT Auth)
-                  │
-             FastAPI Backend
-                  │
-     ┌────────────┼────────────┐
-     │            │            │
-PostgreSQL    pgvector     Gemini 3.6
- Analytics   Chat Memory   Tool Calling
+              Vercel
+        (Next.js Frontend)
+                 │
+        HTTPS + JWT API
+                 │
+              Render
+        (FastAPI Backend)
+                 │
+        PostgreSQL + pgvector
+              (Neon Database)
+                 │
+         Gemini 3.6 Flash AI
 ```
 
 ---
 
-# 🛠 Tech Stack
+## 🛠 Tech Stack
 
-## Frontend
+### Frontend
 
-- Next.js 15
-- TypeScript
-- Tailwind CSS
-- Recharts
-- Lucide Icons
+* Next.js 15
+* TypeScript
+* Tailwind CSS
+* Recharts
+* Lucide React
 
-## Backend
+### Backend
 
-- FastAPI
-- SQLAlchemy
-- PostgreSQL 18
-- pgvector
-- JWT Authentication
+* FastAPI
+* SQLAlchemy
+* PostgreSQL
+* pgvector
+* JWT Authentication
+* Pydantic
 
-## AI
+### AI
 
-- Gemini 3.6 Flash
-- Function / Tool Calling
-- Context Memory
-- Business Analytics
+* Gemini 3.6 Flash
+* Function / Tool Calling
+* Context Memory
+* SQL-powered Business Analytics
+
+### Cloud
+
+* Vercel (Frontend)
+* Render (Backend)
+* Neon (Database)
 
 ---
 
-# 📊 AI Capabilities
+## 🤖 AI Capabilities
 
 MerchantGPT can answer questions like:
 
-- Why did revenue drop this week?
-- Which customers are most likely to churn?
-- What products have the highest refund rates?
-- Generate an abandoned cart recovery email.
-- Create a campaign for loyal customers.
-- Produce a CEO weekly executive report.
+* Why did revenue drop this week?
+* Which customers are most likely to churn?
+* What products have the highest refund rates?
+* Generate an abandoned cart recovery email.
+* Create a campaign for loyal customers.
+* Produce a CEO weekly executive report.
 
-The AI retrieves real merchant data using SQL tools before generating responses.
-
----
-
-# 🔑 Demo Credentials
-
-| Field | Value |
-|------|------|
-| Email | `demo@aurorahome.example` |
-| Password | `Demo@12345` |
+The AI retrieves live merchant data through SQL tools before generating executive-quality business insights.
 
 ---
 
-# ⚙️ Local Setup
+## 🔑 Demo Credentials
 
-## Backend
+| Field        | Value                     |
+| ------------ | ------------------------- |
+| **Email**    | `demo@aurorahome.example` |
+| **Password** | `Demo@12345`              |
+
+---
+
+## ⚙️ Local Setup
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/Manish-kumar-reddy/MerchantGPT.git
+cd MerchantGPT
+```
+
+### 2. Backend
 
 ```bash
 cd backend
@@ -138,10 +167,10 @@ Backend runs at:
 http://localhost:8000
 ```
 
-## Frontend
+### 3. Frontend
 
 ```bash
-cd frontend
+cd ../frontend
 
 npm install
 
@@ -156,47 +185,44 @@ http://localhost:3000
 
 ---
 
-# 🧠 AI Workflow
-
-1. User asks a business question.
-2. Gemini decides which analytical tool to invoke.
-3. FastAPI executes SQL queries.
-4. PostgreSQL returns structured merchant data.
-5. Gemini generates an executive-quality business insight.
-6. Conversation is stored using pgvector memory.
-
----
-
-# 🧪 Testing
-
-Run backend tests:
-
-```bash
-cd backend
-pytest
-```
-
-**Result**
+## 🧠 AI Workflow
 
 ```text
-37 passed in 0.12s
+User Question
+      │
+      ▼
+ Gemini decides the required tool
+      │
+      ▼
+ FastAPI executes SQL analytics
+      │
+      ▼
+ PostgreSQL returns merchant data
+      │
+      ▼
+ Gemini generates business insights
+      │
+      ▼
+ Conversation stored in pgvector
 ```
 
 ---
 
-# 📁 Project Structure
+## 📁 Project Structure
 
 ```text
 MerchantGPT
 │
 ├── frontend/
 │   ├── src/
-│   └── components/
+│   ├── components/
+│   └── lib/
 │
 ├── backend/
 │   ├── app/
 │   ├── scripts/
-│   └── tests/
+│   ├── tests/
+│   └── requirements.txt
 │
 ├── docs/
 │   ├── dashboard.png
@@ -209,10 +235,44 @@ MerchantGPT
 
 ---
 
-# 👨‍💻 Author
+## 🚀 API Endpoints
+
+| Method | Endpoint                          | Description           |
+| ------ | --------------------------------- | --------------------- |
+| POST   | `/api/v1/auth/login`              | User authentication   |
+| POST   | `/api/v1/auth/register`           | Merchant registration |
+| GET    | `/api/v1/auth/me`                 | Current user          |
+| GET    | `/api/v1/analytics/dashboard`     | Executive dashboard   |
+| GET    | `/api/v1/analytics/revenue-leaks` | Revenue leak insights |
+| GET    | `/api/v1/analytics/segments`      | Customer segmentation |
+| POST   | `/api/v1/chat/messages`           | AI business chat      |
+| POST   | `/api/v1/campaigns/generate`      | Generate campaigns    |
+
+Interactive Swagger documentation is available at:
+
+**https://merchantgpt-api.onrender.com/docs**
+
+---
+
+## 🔒 Authentication
+
+MerchantGPT uses **JWT Bearer Authentication**.
+
+After login, the frontend securely stores the access token and automatically authenticates all protected API requests.
+
+---
+
+## 👨‍💻 Author
 
 **Manish Kumar Reddy**
 
-Built for the **Razorpay AI Builder Internship 2026**.
+Full Stack AI Developer
 
-If you found this project interesting, consider giving it a ⭐.
+* GitHub: https://github.com/Manish-kumar-reddy
+* Live Project: https://merchant-gpt.vercel.app
+
+---
+
+## ⭐ Support
+
+If you found MerchantGPT interesting, consider giving this repository a **Star ⭐**. It helps the project reach more developers and recruiters.
