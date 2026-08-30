@@ -13,3 +13,8 @@ AsyncSessionLocal = async_sessionmaker(engine, expire_on_commit=False, class_=As
 async def get_db() -> AsyncGenerator[AsyncSession, None]:
     async with AsyncSessionLocal() as session:
         yield session
+
+
+# Production sync session (used by seed.py)
+sync_engine = create_engine(settings.database_url_sync, echo=False)
+SessionLocal = sessionmaker(bind=sync_engine, autoflush=False, autocommit=False)
