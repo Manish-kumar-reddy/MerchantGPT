@@ -13,9 +13,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+import type { Metadata } from "next";
+
 export const metadata: Metadata = {
-  title: "MerchantGPT — Autonomous AI Growth Manager",
-  description: "AI growth manager for e-commerce merchants: analytics, revenue leak detection, cart recovery, and campaigns.",
+  title: "MerchantGPT",
+  description: "Autonomous AI Growth Manager for E-commerce Merchants",
+  icons: {
+    icon: "/icon.png",
+    apple: "/apple-icon.png",
+  },
 };
 
 export default function RootLayout({
