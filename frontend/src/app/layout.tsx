@@ -13,8 +13,6 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-import type { Metadata } from "next";
-
 export const metadata: Metadata = {
   title: "MerchantGPT",
   description: "Autonomous AI Growth Manager for E-commerce Merchants",
