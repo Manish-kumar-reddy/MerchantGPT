@@ -11,7 +11,8 @@ import app.models  # noqa: F401
 from app.api.routes import analytics, auth, campaigns, chat
 from app.core.config import get_settings
 from app.db.base import Base
-from app.db.session import engine
+from app.db.session import engine, SessionLocalSync
+from scripts.seed import seed
 
 settings = get_settings()
 logger = logging.getLogger("merchantgpt")
@@ -32,6 +33,14 @@ async def lifespan(app: FastAPI):
     # Create database tables
     async with engine.begin() as conn:
         await conn.run_sync(Base.metadata.create_all)
+
+    db = SessionLocalSync()
+    try:
+        seed(db)
+        db.commit()
+    finally:
+        db.close()
+
 
     yield
 
